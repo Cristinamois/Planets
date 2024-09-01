@@ -1,0 +1,296 @@
+
+@media screen and (min-width: 768px) {
+
+    @import url('font.css');
+    
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: #08052B;
+    }
+    
+    a {
+        text-decoration: none;
+        color: antiquewhite;
+    }
+    
+    header {
+        /* grid-column: 1 / -1; */
+        padding: 1.5%;
+        background-color: transparent;
+        /* background-color: grey; */
+        /* border-top: #fff 1px; */
+        border-bottom: 0.5px solid grey;
+        color: #fff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        filter: blur(3px);
+    }
+    
+    header h1 {
+        text-decoration: none;
+        color: white;
+        margin: 0;
+        font-family: 'RBold', 'Times New Roman', Times, serif;
+        font-size: 250%;
+    }
+    
+    nav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        align-items: center;
+    }
+    
+    nav ul li {
+        margin-right: 0.7em;
+    }
+    
+    nav ul li a {
+        text-decoration: none;
+        color: #ffffff;
+        font-family: 'RLight', 'Times New Roman', Times, serif;
+        font-size: 110%;
+        transition: .5s;
+    }
+    
+    nav a:hover {
+        font-family: 'Rblack', sans-serif;
+        font-size: 120%;
+    }
+    
+    nav a:active {
+        font-family: 'Rblack', sans-serif;
+        font-size: 120%;
+    }
+    
+    footer {
+        /* grid-column: 1 / -1; */
+        padding: 0.7em;
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        clear: both;
+        /* margin-top: 5%; */
+    }
+    
+    /* .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    
+    .container img {
+        width: 300px;
+        height: 300px;
+    } */
+    
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; /* Prend 100% de la hauteur de la fenêtre */
+        position: relative; /* Positionnement relatif pour positionner l'image absolument */
+        z-index: 0;
+    }
+    
+    .container img {
+        position: absolute;
+        /* filter: brightness(50%) blur(3px); */
+        /* filter: blur(3px); */
+    }
+    
+    
+    /* sun */
+    #soleilPicture { 
+        width: 15%; /* 200px au lieu d'env 300px */
+        height: auto;
+        left: 43%;
+        top: 30%;
+    }
+    
+    #soleilPicture:hover {
+        width: 16%;
+    }
+    
+    #mercurePicture, #venusPicture, #terrePicture, 
+    #marsPicture, #jupiterPicture, #saturnePicture, 
+    #uranusPicture, #neptunePicture, #soleilPicture {
+        height: auto;
+        transition: .5s;
+        filter: brightness(50%) blur(3px);
+    }
+    
+    
+    #mercurePicture, #venusPicture, #marsPicture {
+        width: 3%;
+    }
+    
+    /* mercury */ 
+    #mercurePicture {
+     /* 30px au lieu de 50px*/
+        right: 30%;
+        top: 35%;
+     }
+    
+    #mercurePicture:hover {
+        width: 4%;
+    }
+    
+    /* earth */ 
+    #terrePicture {
+        width: 4%; /* 63px au lieu de 83px */
+        right: 21%;
+        top: 50%;
+     }
+    
+    #terrePicture:hover {
+        width: 5%;
+    }
+    
+    /* jupiter */
+    #jupiterPicture {
+        width: 10%; /* px au lieu de 176px*/
+        right: 10%;
+        top: 20%;
+    }
+    
+    #jupiterPicture:hover {
+        width: 11%;
+    }
+    
+    /* uranus */
+    #uranusPicture {
+        width: 5%; /* px au lieu de 95px */
+        right: 6%;
+        top: 51%;
+        transform: rotate(45deg);
+    }
+    
+    #uranusPicture:hover {
+        width: 6%;
+    }
+    
+    /* venus */
+    #venusPicture {
+        /*au lieu de 73px */
+        left: 27%;
+        top: 41%;
+    }
+    
+    #venusPicture:hover {
+        width: 4%;
+    }
+    
+    /* mars */
+    #marsPicture {
+        /*au lieu de 68x */
+        left: 21%;
+        top: 55%;
+    }
+    
+    #marsPicture:hover {
+        width: 4%;
+    }
+    
+    /* saturne */
+    #saturnePicture {
+        width: 8%; /*au lieu de 146px et 140px */
+        left: 10%;
+        top: 27%;
+    }
+    
+    #saturnePicture:hover {
+        width: 9%;
+    }
+    
+    /* neptune */
+    #neptunePicture {
+        width: 6%; /*au lieu de 112px */
+        left: 4%;
+        top: 50%;
+    }
+    
+    #neptunePicture:hover {
+        width: 7%;
+    }
+    
+    
+    
+    .login, .signup {
+        position: absolute;
+        font-size: 16px;
+        font-family: 'Rblack', sans-serif;
+        margin-right: 20px;
+        width: 100px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 15px;
+        bottom: 15%;
+     }
+    
+    .login {
+        background-color: #CACACA;
+        right: 7%;
+     }
+    
+    .login a {
+        color: #08052B;
+        /* color: red; */
+    }
+    
+    .signup {
+        background-color: #23204D;
+        right: 0.5%;
+    } 
+      
+    
+    .login-box {
+        z-index: 1;
+        width: 845px;
+        height: 670px;
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 20px;
+        background-color: #6F42C3;
+        border-radius: 50px;
+    }
+    
+    .login-box img {
+        top: 0;
+        left: 0;
+        width: 45%;
+        height: 100%;
+        border-radius: 50px 0 0 50px;
+    }
+
+    .login-box p {
+        display: flex;
+        justify-content: center;
+        margin-left: 10%;
+        font-family: 'Rregular', sans-serif;
+        color: white;
+    }
+
+    .login-box a {
+        font-family: 'Rregular', sans-serif;
+        color: #0E3970;
+        /* color: red; */
+        /* font-size: 1166px; */
+        display: flex;
+        justify-content: center;
+        margin-left: 10%;
+        /* top: 10%; */
+        z-index: 2;
+    }
+
+
+    
+    }
